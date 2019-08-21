@@ -9,14 +9,18 @@
     
     @endif
     
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                Welcome, {{ Auth::user()->name }}. Click below to view the System Control Panel for Admins.
-                    <div class="panel-body">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div>
+               <h2> Welcome, <b>{{ Auth::user()->name }}.</b></h2>
+               
+                <br><br>
+                
+                    <div class="centered-content">
                         <?php if(auth()->user()->isAdmin == 1){
                                 ?>
                                 <div class="panel-body">
+                                Click below to view the System Control Panel for Admins.<br><br>
                                     <a href="{{url('admin/routes')}}" class="btn btn-primary">System Admin Control Panel</a>
 
                                 </div>
@@ -29,6 +33,7 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
 @endsection

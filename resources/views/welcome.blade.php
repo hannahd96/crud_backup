@@ -9,6 +9,9 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
+         <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/d70927c27e.js"></script>
+
         <!-- Styles -->
         <style>
             html, body {
@@ -81,7 +84,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Stack Application
+                <i class="fas fa-layer-group"></i>
+                    Stack Application 
+                                        
                 </div>
 
                 <!-- <div class="links">

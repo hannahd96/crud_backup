@@ -1,0 +1,22 @@
+.centered-header{
+    float:center;
+    text-align:center;
+}
+
+.centered-content{
+    float:center;
+    text-align:center;
+}
+
+.add_button{
+    float:right;
+    margin:5px 20px 5px 0px;
+    font-size:25px;
+    color: #1aff1a;
+}
+
+.back_arrow{
+    margin:5px 0px 5px 10px;
+    font-size:25px;
+    color: blue;
+}

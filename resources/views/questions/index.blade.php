@@ -2,14 +2,9 @@
 @extends('layouts.app')
 
 @section('content')
-<head>
-  <!-- <link href = "css/main.css" rel="stylesheet"> -->
-  
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Exo|Julius+Sans+One|Questrial|Varela" rel="stylesheet"> -->
-
-  <!-- <style>
+<!-- <head>
+   
+     <style>
       input[type=text], select {
       width: 60%;
       padding: 6px 14px;
@@ -35,8 +30,7 @@
       background-color: #45a049;
     }  
   </style>
-   -->
-  <!-- <script>
+   <script>
         // hide #back-top first
 $("#back-top").hide();
 
@@ -154,10 +148,11 @@ function sortTableOldest() {
 
     <div class="container" id="top-row">
         <div class="row justify-content-center">
+        <a href="{{url('admin/routes')}}" class="btn btn-link">Back</a>
             <div class="col-md-8">
                <h2> Questions </h2>
-                    <a href="{{url('admin/routes')}}" class="btn btn-link">Back</a>
-                    <a href="{{ route('questions.create') }}" class="btn btn-link">Add</a>
+                   
+                    <a href="{{ route('questions.create') }}" class="add_button" alt="Add Question"><i class="far fa-plus-square"></i></a>
                                        <!-- SEARCHBAR -->
                       <!-- <div class="search-container">
                         <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search questions.." 
@@ -166,8 +161,8 @@ function sortTableOldest() {
                          <button onclick="sortTable()" class="btn btn-warning" id="sort_btn" style="float:right; margin-right:15px;">A-Z</button>
                          <button onclick="sortTableOldest()" class="btn btn-success" id="sort_btn" style="float:right; margin-right:15px;">Oldest to Newest</button>
 
-                      </div>
-                    -->
+                      </div> -->
+                   
                     
                     <div class="panel-body">
                           @if (count($questions) === 0)
@@ -204,8 +199,8 @@ function sortTableOldest() {
             </div>
         </div>
     </div>
-</div>
-<!-- <div id="scroll_top_auto" style="float:right; text-align:right;">
+<!-- </div>
+<div id="scroll_top_auto" style="float:right; text-align:right;">
         <p id="back-top">
             <a href="#top"><span style="font-size:40px;">^</span></a>
         </p>
