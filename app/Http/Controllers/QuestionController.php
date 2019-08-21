@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Question;
 use Illuminate\Support\Facades\Session;
 use Validator;
+
 class QuestionController extends Controller
 {
     /**
@@ -99,7 +100,7 @@ class QuestionController extends Controller
             'content' => 'required|max:191'
         ]);
 
-        $question->content = $request->input('question');
+        $question->content = $request->input('content');
         $question->save();
 
         $session = $request->session()->flash('message', 'Question updated successfully!');
