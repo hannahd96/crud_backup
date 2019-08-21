@@ -23,7 +23,7 @@
                        
                         <div class="form-group">
                             <label for="content">Question</label>
-                            <input type="text" class="form-control" id="content" name="content" value="{{ old('content') }}" />
+                            <input type="text" class="form-control" id="content" name="content" autocomplete="off" value="{{ old('content') }}" />
                         </div>
                         <a href="{{ route('questions.index') }}" class="btn btn-default">Cancel</a>
                         <button type="submit" class="btn btn-primary pull-right">Submit</button>

@@ -12,11 +12,30 @@
     float:right;
     margin:5px 20px 5px 0px;
     font-size:25px;
+    color:#2eb82e;
+}
+
+.add_button:hover{
     color: #1aff1a;
 }
 
-.back_arrow{
+.back_button{
     margin:5px 0px 5px 10px;
     font-size:25px;
-    color: blue;
+    color: #7f7f7f;
+} 
+
+.up_button{
+    font-size:25px;
+    color: #7f7f7f;
+    margin:0px 20px 10px 0px;;
 }
+
+.navbar {
+    z-index: 1;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:rgb(255, 255, 255, 0.2);
+  }
