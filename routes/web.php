@@ -19,5 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// Question Route
+Route::resource('questions', 'QuestionController');
+Route::get('questions.create', 'QuestionController@create')->name('questions.create');
+Route::post('questions.store', 'QuestionController@store')->name('questions.store');
+Route::get('questions.edit.{id}', 'QuestionController@edit')->name('questions.edit');
+
 // Admin Routes
 Route::get('admin/routes', 'HomeController@admin')->middleware('admin');
