@@ -129,55 +129,55 @@ class QuestionController extends Controller
 
     ////////////////// Questionnaire ///////////////////////
 
-    public function getAddToContent(Request $request, $id){
-        $question = Question::find($id);
-        $oldContent= Session::has('content') ? Session::get('content') : null;
-        $content = new QContent($oldContent);
-        $content->add($question, $question->id);
+    // public function getAddToContent(Request $request, $id){
+    //     $question = Question::find($id);
+    //     $oldContent= Session::has('content') ? Session::get('content') : null;
+    //     $content = new QContent($oldContent);
+    //     $content->add($question, $question->id);
 
-        $request->session()->put('content', $content);
-        return redirect()->route('questions.index');
-    }
+    //     $request->session()->put('content', $content);
+    //     return redirect()->route('questions.index');
+    // }
 
-    public function getQContent(){
-        // check if we have content in the session
-        if (!Session::has('content')) {
-            return view('questions.questionnaire-content');
-        }
-        $oldContent = Session::get('content');
-        $content = new QContent($oldContent);
-        return view('questions.questionnaire-content', ['questions' => $content->items]);
-    }
+    // public function getQContent(){
+    //     // check if we have content in the session
+    //     if (!Session::has('content')) {
+    //         return view('questions.questionnaire-content');
+    //     }
+    //     $oldContent = Session::get('content');
+    //     $content = new QContent($oldContent);
+    //     return view('questions.questionnaire-content', ['questions' => $content->items]);
+    // }
 
-    public function getFinish(){
-        if (!Session::has('content')){
-            return view('questions.questionnaire-content');
-        }
-        $oldContent = Session::get('content');
-        $content = new QContent($oldContent);
-        return view('questions.finish');
-    }
+    // public function getFinish(){
+    //     if (!Session::has('content')){
+    //         return view('questions.questionnaire-content');
+    //     }
+    //     $oldContent = Session::get('content');
+    //     $content = new QContent($oldContent);
+    //     return view('questions.finish');
+    // }
 
-    public function postQuestionnaire(Request $request){
-        if (!Session::has('content')){
-            return redirect()->route('questions.questionnaire-content');
-        }
-        $oldContent = Session::get('content');
-        $content = new QContent($oldContent);
+    // public function postQuestionnaire(Request $request){
+    //     if (!Session::has('content')){
+    //         return redirect()->route('questions.questionnaire-content');
+    //     }
+    //     $oldContent = Session::get('content');
+    //     $content = new QContent($oldContent);
 
-        $questionnaire = new Questionnaire();
-        // takes PHP object and converts it into a string..
-        // and then store that string in the DB
-        $questionnaire->content = serialize($content);
-        // question var name is content, has to be changed here to avoid duplication or errors
-        $questionnaire->question_content =  $request->input('content');
+    //     $questionnaire = new Questionnaire();
+    //     // takes PHP object and converts it into a string..
+    //     // and then store that string in the DB
+    //     $questionnaire->content = serialize($content);
+    //     // question var name is content, has to be changed here to avoid duplication or errors
+    //     $questionnaire->question_content =  $request->input('content');
 
-        // build a query for the DB to save the questionnaire
-        Auth::user()->questionnaires()->save($questionnaire);
+    //     // build a query for the DB to save the questionnaire
+    //     Auth::user()->questionnaires()->save($questionnaire);
 
-        Session::forget('content');
-        return redirect()->route('finish')->with('success', 'Sucessfully created questionnaire!');
+    //     Session::forget('content');
+    //     return redirect()->route('finish')->with('success', 'Sucessfully created questionnaire!');
     
-    }
+    // }
 
 }

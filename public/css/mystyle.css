@@ -47,3 +47,12 @@
   #crud_btn{
     margin: 2px 5px 2px 5px;
   } 
+
+  #admin_panel_item{
+      margin:20px 0px 20px 0px;
+  }
+
+  #admin_panel_btn{
+      margin-left:13px;
+      display: inline;
+  }

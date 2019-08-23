@@ -20,7 +20,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('about', 'HomeController@about')->name('about');
 
-// Question Route
+// Users Route
+Route::resource('users', 'UserController');
+Route::post('users.store', 'UserController@store')->name('users.store');
+Route::get('users.edit.{id}', 'UserController@edit')->name('users.edit');
+
+// Questions Route
 Route::resource('questions', 'QuestionController');
 Route::get('questions.create', 'QuestionController@create')->name('questions.create');
 Route::post('questions.store', 'QuestionController@store')->name('questions.store');

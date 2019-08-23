@@ -61,17 +61,25 @@
                                     About
                                 </a>
                             </li>
+                            
 
-                                @if(auth()->user()->isAdmin == 1)
+                            @if(auth()->user()->isAdmin == 1)
                                     <li>
                                         <a class="nav-link" style="padding-right:25px;" href="{{url('admin/routes')}}">System Admin Control Panel</a>
                                     </li>
-
+                            @endif
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    <i class="fas fa-user"></i>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    @if(auth()->user()->isAdmin == 1)
+                                        <i class="fas fa-user-shield"></i> 
+                                        {{ Auth::user()->name }} <span class="caret"></span>
+                                    @endif
+                                    
+                                    @if(auth()->user()->isAdmin !== 1)
+                                        <i class="fas fa-user"></i>
+                                        {{ Auth::user()->name }} <span class="caret"></span>
+                                    @endif
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -93,7 +101,6 @@
         </nav>
 
         <main class="py-4">
-           <!-- <br><br><br> -->
             @yield('content')
         </main>
     </div>

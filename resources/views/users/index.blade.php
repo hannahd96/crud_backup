@@ -59,9 +59,9 @@
     <div class="row justify-content-center">
         
             <div class="col-md-8">
-               <h2> Questions </h2>
+               <h2> Users </h2>
                   <ul>
-                    <li>As System Admin, you can Create, Read, Update and Delete questions from the table below. </li>
+                    <li>As System Admin, you can Read, Update and Delete users from the table below. </li>
                   </ul>
                   
                     <div class="input-group">
@@ -72,31 +72,36 @@
                             </button>
                         </span>
                     </div>
-                      <a href="{{ route('questions.create') }}" class="btn btn-info" id="create_btn">Create New Question</a>
+                      <!-- <a href="#" class="btn btn-info" id="create_btn">Create New User</a> -->
                     <!-- Search Results -->
+                    <br>
                     <div class="results">
 
                     <div class="panel-body">
-                          @if (count($questions) === 0)
-                              <p>There are no questions!</p>
+                          @if (count($users) === 0)
+                              <p>There are no users!</p>
                           @else
                               <table class="table table-striped" id="myTable">
                                   
-                                      <th>Question</th>
+                                      <th>Name</th>
+                                      <th>Email</th>
+                                      <th>Admin</th>
                                       <th>Action</th>
                                   </thead>
                                   
                                   <tbody>
-                              @foreach ($questions as $question)
+                              @foreach ($users as $user)
                                       <tr>
                                          
-                                          <td>{{ $question->content }}</td>
+                                          <td>{{ $user->name }}</td>
+                                          <td>{{ $user->email }}</td>
+                                          <td>{{ $user->isAdmin }}</td>
                                           <td>
-                                            <a href="{{ route('questions.show', array('question' => $question)) }}"
+                                            <a href="{{ route('users.show', array('user' => $user)) }}"
                                                id="crud_btn" class="btn btn-outline-secondary btn-sm">View</a>
-                                            <a href="{{ route('questions.edit', array('question' => $question)) }}"
+                                            <a href="{{ route('users.edit', array('user' => $user)) }}"
                                                 id="crud_btn" class="btn btn-warning btn-sm">Edit</a>
-                                            <form style="display:inline-block" method="POST" action="{{ route('questions.destroy', array('question' => $question)) }}">
+                                            <form style="display:inline-block" method="POST" action="{{ route('users.destroy', array('user' => $user)) }}">
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                 <button type="submit" id="crud_btn" class="btn btn-danger btn-sm">Delete</a>
