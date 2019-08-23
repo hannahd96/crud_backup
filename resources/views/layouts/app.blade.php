@@ -55,8 +55,19 @@
                                 </li>
                             @endif
                         @else
-                        
-                       <li> <a class="nav-link" style="padding-right:25px;" href="{{ url('about') }}">About</a></li>
+                           
+                            <li> 
+                                <a class="nav-link" style="padding-right:25px;" href="{{ url('about') }}">
+                                    About
+                                </a>
+                            </li>
+
+                                @if(auth()->user()->isAdmin == 1)
+                                    <li>
+                                        <a class="nav-link" style="padding-right:25px;" href="{{url('admin/routes')}}">System Admin Control Panel</a>
+                                    </li>
+
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     <i class="fas fa-user"></i>
@@ -82,7 +93,7 @@
         </nav>
 
         <main class="py-4">
-           <br><br><br>
+           <!-- <br><br><br> -->
             @yield('content')
         </main>
     </div>

@@ -8,14 +8,13 @@
     text-align:center;
 }
 
-.add_button{
-    float:right;
-    margin:5px 20px 5px 0px;
-    font-size:25px;
+#add_button{
+    margin: 0px 5px 0px 5px;
+    font-size:15px;
     color:#2eb82e;
 }
 
-.add_button:hover{
+#add_button:hover{
     color: #1aff1a;
 }
 
@@ -31,11 +30,20 @@
     margin:0px 20px 10px 0px;;
 }
 
-.navbar {
+/* .navbar {
     z-index: 1;
     overflow: hidden;
     position: fixed;
     top: 0;
     width: 100%;
     background-color:rgb(255, 255, 255, 0.2);
+  } */
+
+  #create_btn{
+      float:right;
+      margin:16px 0px 16px 0px;
   }
+
+  #crud_btn{
+    margin: 2px 5px 2px 5px;
+  } 
