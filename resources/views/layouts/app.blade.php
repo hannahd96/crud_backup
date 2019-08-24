@@ -64,9 +64,17 @@
                             
 
                             @if(auth()->user()->isAdmin == 1)
-                                    <li>
-                                        <a class="nav-link" style="padding-right:25px;" href="{{url('admin/routes')}}">System Admin Control Panel</a>
-                                    </li>
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        <i class="fas fa-cogs" style="padding-right:8px;"></i>System Admin Control Panel
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('questionnaires.index') }}">Manage Questionnaires</a>
+                                        <a class="dropdown-item" href="{{ route('questions.index') }}">Manage Questions</a>
+                                        <a class="dropdown-item" href="{{ route('users.index') }}">Manage Users</a>
+                                    </div>
+                                </li>
                             @endif
 
                             <li class="nav-item dropdown">
@@ -91,7 +99,7 @@
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
-                                    </form>
+                                    </form>                                    
                                 </div>
                             </li>
                         @endguest

@@ -31,5 +31,10 @@ Route::get('questions.create', 'QuestionController@create')->name('questions.cre
 Route::post('questions.store', 'QuestionController@store')->name('questions.store');
 Route::get('questions.edit.{id}', 'QuestionController@edit')->name('questions.edit');
 
+// Questionnaires Route
+Route::resource('questionnaires', 'QuestionnaireController');
+Route::get('questionnaires.create', 'QuestionnaireController@create')->name('questionnaires.create');
+Route::post('questionnaires.store', 'QuestionnaireController@store')->name('questionnaires.store');
+
 // Admin Routes
 Route::get('admin/routes', 'HomeController@admin')->middleware('admin');
