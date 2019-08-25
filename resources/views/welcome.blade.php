@@ -84,16 +84,21 @@
                 </div>
             @endif
 
-            <div class="content" style="background-color: rgba(255, 255, 255,0.2); 
+            <div class="content" style="background-color: rgba(255, 255, 255, 0.2); 
                                         text-align:center; 
+                                        width:60%;
+                                        max-width:60%; 
+                                        display: inline-block;
                                         padding:30px 30px 0px 30px;
-                                        color:#dddddd !important;
-                                        ">
+                                        color:#dddddd !important;">
                 <div class="title m-b-md">
                 <i class="fas fa-layer-group"></i>
-                    Stack Application 
-                                        
-                </div>
+                    Stack Application              
+                </div>  
+                <p> This is a Stack Application built using Laravel PHP Framework and connects to a MySQL database. The application 
+                    allows the System Administrator to manipulate the data stored in the database by enabling CRUD functionality (Create, Read, Update, Delete). 
+                    The role of the application is to allow the System Administrator to create questionnaires and assign them to users.
+                </p>
             </div>
         </div>
     </body>

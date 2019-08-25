@@ -21,8 +21,8 @@
                                 ?>
                                 <div class="panel-body">
                                 Click below to view the System Control Panel for Admins.<br><br>
-                                    <a href="{{url('admin/routes')}}" class="btn btn-primary">System Admin Control Panel</a>
-
+                                    
+                                    <a href="{{ url('admin/routes') }}" id="admin_panel_btn" class="btn btn-sm animated-button victoria-four">Next</a> 
                                 </div>
                                 <?php 
                             } 

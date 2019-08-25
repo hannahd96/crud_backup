@@ -11,7 +11,8 @@
     <div class="row justify-content-center">
         <div class="col-md-7">
             <h2 class="chunky_header">About</h2>
-                <p> This is a Stack Application built using Laravel PHP Framework and connects to data stored in a MySQL database. The application 
+                <p> 
+                    This is a Stack Application built using Laravel PHP Framework and connects to data stored in a MySQL database. The application 
                     allows the System Administrator to manipulate the data stored in the database by enabling CRUD functionality (Create, Read, Update, Delete).
                     The main objective of the application is to provide an admin with a control panel to create questionnaires for normal users to complete.
                 </p>
