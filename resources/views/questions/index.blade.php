@@ -72,7 +72,7 @@
                             </button>
                         </span>
                     </div>
-                      <a href="{{ route('questions.create') }}" class="btn btn-info" id="create_btn">Create New Question</a>
+                      <a href="{{ route('questions.create') }}" class="btn btn-outline-light" id="create_btn">Create New Question</a>
                     <!-- Search Results -->
                     <div class="results">
 
@@ -93,13 +93,13 @@
                                           <td>{{ $question->content }}</td>
                                           <td>
                                             <a href="{{ route('questions.show', array('question' => $question)) }}"
-                                               id="crud_btn" class="btn btn-outline-secondary btn-sm">View</a>
+                                               id="crud_btn" class="btn btn-dark btn-sm">View</a>
                                             <a href="{{ route('questions.edit', array('question' => $question)) }}"
-                                                id="crud_btn" class="btn btn-warning btn-sm">Edit</a>
+                                                id="crud_btn" class="btn btn-sm" style="background-color:#b33670; color:white;">Edit</a>
                                             <form style="display:inline-block" method="POST" action="{{ route('questions.destroy', array('question' => $question)) }}">
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                <button type="submit" id="crud_btn" class="btn btn-danger btn-sm">Delete</a>
+                                                <button type="submit" id="crud_btn" class="btn btn-sm" style="background-color:#f1ba54">Delete</a>
                                             </form>
                                           </td>
                                       </tr>

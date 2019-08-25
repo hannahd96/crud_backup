@@ -98,13 +98,11 @@
                                           <td>{{ $user->isAdmin }}</td>
                                           <td>
                                             <a href="{{ route('users.show', array('user' => $user)) }}"
-                                               id="crud_btn" class="btn btn-outline-secondary btn-sm">View</a>
-                                            <a href="{{ route('users.edit', array('user' => $user)) }}"
-                                                id="crud_btn" class="btn btn-warning btn-sm">Edit</a>
+                                            id="crud_btn" class="btn btn-dark btn-sm">View</a>
                                             <form style="display:inline-block" method="POST" action="{{ route('users.destroy', array('user' => $user)) }}">
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                <button type="submit" id="crud_btn" class="btn btn-danger btn-sm">Delete</a>
+                                                <button type="submit" id="crud_btn" class="btn btn-sm" style="background-color:#f1ba54">Delete</a>
                                             </form>
                                           </td>
                                       </tr>

@@ -73,12 +73,12 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}" style="color:white"><i class="fas fa-home" style="padding-right:5px;"></i>Home</a>
+                        <a href="{{ url('/home') }}" style="color:white !important"><i class="fas fa-home" style="padding-right:5px;"></i>Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}" style="color:white !important">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}" style="color:white !important">Register</a>
                         @endif
                     @endauth
                 </div>

@@ -28,13 +28,17 @@ body{
 .back_button{
     margin:5px 0px 5px 10px;
     font-size:25px;
-    color: #7f7f7f;
+    color: #ffffff;
 } 
 
 .up_button{
     font-size:25px;
-    color: #7f7f7f;
+    color: #ffffff;
     margin:0px 20px 10px 0px;;
+}
+
+#transparent_card{
+    background-color:rgba(0,0,0,0.1);
 }
 
 .navbar {

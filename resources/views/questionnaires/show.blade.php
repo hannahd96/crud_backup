@@ -2,11 +2,11 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    Questionnaire: {{ $questionnaire->title }}
+                    <h2>{{ $questionnaire->title }}</h2>
                 </div>
 
                 <div class="panel-body">
@@ -46,12 +46,10 @@
                         </tbody>
                     </table>
                     <a href="{{ route('questionnaires.index') }}" class="btn btn-default">Back</a>
-                    <a href="#"
-                       class="btn btn-warning">Edit</a>
                     <form style="display:inline-block" method="POST" action="#">
                         <input type="hidden" name="_method" value="DELETE">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <button type="submit" class="form-control btn btn-danger">Delete</a>
+                        <button type="submit" id="crud_btn" class="btn btn-sm" style="background-color:#f1ba54">Delete</a>
                     </form>
                 </div>
             </div>

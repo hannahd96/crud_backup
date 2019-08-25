@@ -70,8 +70,8 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <a href="{{ route('questionnaires.index') }}" class="btn btn-warning" style="margin-right:20px">Cancel</a>
-                                <button type="submit" class="btn btn-success pull-right">Submit</button>
+                                <a href="{{ route('questionnaires.index') }}" class="btn btn-light" style="margin-right:20px">Cancel</a>
+                                <button type="submit" class="btn btn-dark pull-right">Submit</button>
                             </form>
                 </div>
             </div>

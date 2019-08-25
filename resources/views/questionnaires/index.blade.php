@@ -72,7 +72,7 @@
                             </button>
                         </span>
                     </div>
-                      <a href="{{ url('questionnaires.create') }}" class="btn btn-info" id="create_btn">Create New Questionnaire</a>
+                      <a href="{{ url('questionnaires.create') }}" class="btn btn-outline-light" id="create_btn">Create New Questionnaire</a>
                     <!-- Search Results -->
                     <div class="results">
 
@@ -94,12 +94,12 @@
                                           <td>{{ $questionnaire->description }}</td>
                                           <td>
                                             <a href="{{ route('questionnaires.show', array('questionnaire' => $questionnaire)) }}"
-                                               id="crud_btn" class="btn btn-outline-secondary btn-sm">View</a>
+                                               id="crud_btn" class="btn btn-dark btn-sm">View</a>
                                             <!-- <a href="#" id="crud_btn" class="btn btn-warning btn-sm">Edit</a>  -->
                                             <form style="display:inline-block" action="{{ route('questionnaires.destroy', array('questionnaire' => $questionnaire)) }}" method="POST">
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                <button type="submit" id="crud_btn" class="btn btn-danger btn-sm">Delete</a>
+                                                <button type="submit" id="crud_btn" class="btn btn-sm" style="background-color:#f1ba54">Delete</a>
                                             </form>
                                           </td>
                                       </tr>

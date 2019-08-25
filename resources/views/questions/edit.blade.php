@@ -23,8 +23,8 @@
                             <label for="content">Question</label>
                             <input type="text" class="form-control" id="content" name="content" value="{{ old('content', $question->content) }}" />
                         </div>
-                        <a href="{{ route('questions.index') }}" class="btn btn-default">Cancel</a>
-                        <button type="submit" class="btn btn-primary pull-right">Submit</button>
+                        <a href="{{ route('questions.index') }}" class="btn btn-light" style="margin-right:20px">Cancel</a>
+                        <button type="submit" class="btn btn-dark pull-right">Submit</button>
                     </form>
                 </div>
             </div>

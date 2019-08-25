@@ -71,6 +71,7 @@
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ url('admin/routes') }}">Main Menu</a>
                                         <a class="dropdown-item" href="{{ route('questionnaires.index') }}">Manage Questionnaires</a>
                                         <a class="dropdown-item" href="{{ route('questions.index') }}">Manage Questions</a>
                                         <a class="dropdown-item" href="{{ route('users.index') }}">Manage Users</a>
