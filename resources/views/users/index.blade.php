@@ -65,7 +65,7 @@
                   </ul>
                   
                     <div class="input-group">
-                      <input type="text" class="form-control" id="myInput" onkeyup="searchTable()" placeholder="Search questions.." autocomplete="off"> 
+                      <input type="text" class="form-control" id="myInput" onkeyup="searchTable()" placeholder="Search users.." autocomplete="off"> 
                         <span class="input-group-btn">
                             <button type="submit" class="btn btn-default">
                                 <i class="fas fa-search"></i>

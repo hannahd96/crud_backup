@@ -28,7 +28,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="background-color: rgba(0, 0, 0, 0.4) !important;">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                 <i class="fas fa-layer-group"></i>
@@ -109,6 +109,7 @@
         </nav>
 
         <main class="py-4">
+        <br><br><br>
             @yield('content')
         </main>
     </div>

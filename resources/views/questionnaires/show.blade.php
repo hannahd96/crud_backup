@@ -20,14 +20,32 @@
                                 <td>Description</td>
                                 <td>{{ $questionnaire->description }}</td>
                             </tr>
+                            
                             <tr>
                                 <td>Question One</td>
-                                <td>{{ $questionnaire->question_one->content }}</td>
+                                <td>{{ $questionnaire->question->content }}</td>
                             </tr>
-                           
+                            <tr>
+                                <td>Question Two</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Question Three</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Question Four</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Question Five</td>
+                                <td></td>
+                            </tr>
+                            
+
                         </tbody>
                     </table>
-                    <a href="#" class="btn btn-default">Back</a>
+                    <a href="{{ route('questionnaires.index') }}" class="btn btn-default">Back</a>
                     <a href="#"
                        class="btn btn-warning">Edit</a>
                     <form style="display:inline-block" method="POST" action="#">

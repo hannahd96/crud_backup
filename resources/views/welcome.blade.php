@@ -15,7 +15,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                /* background-color: #fff; */
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -66,12 +66,14 @@
             }
         </style>
     </head>
-    <body>
+    <body style="background-image: url('gradient_03.jpg');
+                background-repeat:no-repeat;
+                background-size:cover;">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" style="color:white"><i class="fas fa-home" style="padding-right:5px;"></i>Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -82,22 +84,16 @@
                 </div>
             @endif
 
-            <div class="content">
+            <div class="content" style="background-color: rgba(255, 255, 255,0.2); 
+                                        text-align:center; 
+                                        padding:30px 30px 0px 30px;
+                                        color:#dddddd !important;
+                                        ">
                 <div class="title m-b-md">
                 <i class="fas fa-layer-group"></i>
                     Stack Application 
                                         
                 </div>
-
-                <!-- <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div> -->
             </div>
         </div>
     </body>

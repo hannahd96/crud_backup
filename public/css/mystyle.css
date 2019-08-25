@@ -1,3 +1,9 @@
+body{
+    background-image:url('gradient_03.jpg'); 
+    background-repeat:no-repeat; 
+    background-size:cover;
+}
+
 .centered-header{
     float:center;
     text-align:center;
@@ -30,14 +36,19 @@
     margin:0px 20px 10px 0px;;
 }
 
-/* .navbar {
+.navbar {
     z-index: 1;
-    overflow: hidden;
     position: fixed;
     top: 0;
     width: 100%;
-    background-color:rgb(255, 255, 255, 0.2);
-  } */
+  }
+
+  .navbar-brand {
+    color:white !important;
+    font-weight:bold;
+    letter-spacing: 1px;
+  }
+
 
   #create_btn{
       float:right;

@@ -95,7 +95,7 @@
                                           <td>
                                             <a href="{{ route('questionnaires.show', array('questionnaire' => $questionnaire)) }}"
                                                id="crud_btn" class="btn btn-outline-secondary btn-sm">View</a>
-                                            <a href="#" id="crud_btn" class="btn btn-warning btn-sm">Edit</a> 
+                                            <!-- <a href="#" id="crud_btn" class="btn btn-warning btn-sm">Edit</a>  -->
                                             <form style="display:inline-block" action="{{ route('questionnaires.destroy', array('questionnaire' => $questionnaire)) }}" method="POST">
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
