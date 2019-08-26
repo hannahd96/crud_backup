@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="panel-body">
-                    <table class="table table-hover">
+                    <table class="table">
                         <tbody>
                             <tr>
                                 <td>ID</td>
@@ -22,13 +22,14 @@
                             </tr>
                         </tbody>
                     </table>
-                    <a href="{{ route('questions.index') }}" class="btn btn-default">Back</a>
+                    <br>
+                    <a href="{{ route('questions.index') }}" id="crud_btn" class="btn btn-light">Back</a>
                     <a href="{{ route('questions.edit', array('question' => $question)) }}"
-                    class="btn btn-sm" style="background-color:#b33670; color:white;">Edit</a>
+                    class="btn" style="background-color:#b33670; color:white;">Edit</a>
                     <form style="display:inline-block" method="POST" action="{{ route('questions.destroy', array('question' => $question)) }}">
                         <input type="hidden" name="_method" value="DELETE">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        <button type="submit" id="crud_btn" class="btn btn-sm" style="background-color:#f1ba54">Delete</a>
+                        <button type="submit" id="crud_btn" class="btn" style="background-color:#f1ba54">Delete</a>
                     </form>
                 </div>
             </div>

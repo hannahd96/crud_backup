@@ -93,13 +93,13 @@
                                           <td>{{ $question->content }}</td>
                                           <td>
                                             <a href="{{ route('questions.show', array('question' => $question)) }}"
-                                               id="crud_btn" class="btn btn-dark btn-sm">View</a>
+                                               id="crud_btn" style="color:white;"><i class="fas fa-eye"></i></a>
                                             <a href="{{ route('questions.edit', array('question' => $question)) }}"
-                                                id="crud_btn" class="btn btn-sm" style="background-color:#b33670; color:white;">Edit</a>
+                                                id="crud_btn" style="color:white;"><i class="fas fa-edit"></i></a>
                                             <form style="display:inline-block" method="POST" action="{{ route('questions.destroy', array('question' => $question)) }}">
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                <button type="submit" id="crud_btn" class="btn btn-sm" style="background-color:#f1ba54">Delete</a>
+                                                <button type="submit" id="crud_btn"><i class="fas fa-trash"></i></a>
                                             </form>
                                           </td>
                                       </tr>

@@ -5,9 +5,12 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card" id="transparent_card">
-                <div class="card-header"><h2>{{ __('Login') }}</h2></div>
+                <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
+                    <p class="centered-content">If you have an account with us, log in using your email address.</p>
+                    <p class="centered-content">Don't have an account? Register with us <a href="{{ route('register') }}" style="color:#f1ba54;">here</a></p>
+                   <br> 
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 

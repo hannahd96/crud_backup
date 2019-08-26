@@ -61,7 +61,7 @@
             <div class="col-md-8">
                <h2> Users </h2>
                   <ul>
-                    <li>As System Admin, you can Read, Update and Delete users from the table below. </li>
+                    <li>As System Admin, you can Read and Delete users from the table below. </li>
                   </ul>
                   
                     <div class="input-group">
@@ -98,11 +98,11 @@
                                           <td>{{ $user->isAdmin }}</td>
                                           <td>
                                             <a href="{{ route('users.show', array('user' => $user)) }}"
-                                            id="crud_btn" class="btn btn-dark btn-sm">View</a>
+                                            id="crud_btn" style="color:white;"><i class="fas fa-eye"></i></a>
                                             <form style="display:inline-block" method="POST" action="{{ route('users.destroy', array('user' => $user)) }}">
                                                 <input type="hidden" name="_method" value="DELETE">
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                <button type="submit" id="crud_btn" class="btn btn-sm" style="background-color:#f1ba54">Delete</a>
+                                                <button type="submit" id="crud_btn"><i class="fas fa-trash"></i></a>
                                             </form>
                                           </td>
                                       </tr>

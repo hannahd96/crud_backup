@@ -5,9 +5,11 @@
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card" id="transparent_card">
-                <div class="card-header"><h2>{{ __('Register') }}</h2></div>
+                <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
+                    <p id="centered-content">By creating an admin account, you will be able to Create, Read, Update and Delete questionnaires, questions and users.</p>
+                    <br>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 

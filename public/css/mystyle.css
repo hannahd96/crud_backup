@@ -15,26 +15,24 @@ body{
     text-align:center;
 }
 
-#add_button{
-    margin: 0px 5px 0px 5px;
-    font-size:15px;
-    color:#2eb82e;
-}
-
-#add_button:hover{
-    color: #1aff1a;
-}
-
 .back_button{
     margin:5px 0px 5px 10px;
     font-size:25px;
     color: #ffffff;
 } 
 
+.back_button:hover{
+    color:rgba(0,0,0, 0.3);
+}
+
 .up_button{
     font-size:25px;
     color: #ffffff;
     margin:0px 20px 10px 0px;;
+}
+
+.up_button:hover{
+    color:rgba(0,0,0, 0.3);
 }
 
 #transparent_card{

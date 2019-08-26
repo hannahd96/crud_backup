@@ -95,9 +95,8 @@
                 <i class="fas fa-layer-group"></i>
                     Stack Application              
                 </div>  
-                <p> This is a Stack Application built using Laravel PHP Framework and connects to a MySQL database. The application 
+                <p> Stack Application built using Laravel PHP Framework and connects to a MySQL database. The application 
                     allows the System Administrator to manipulate the data stored in the database by enabling CRUD functionality (Create, Read, Update, Delete). 
-                    The role of the application is to allow the System Administrator to create questionnaires and assign them to users.
                 </p>
             </div>
         </div>
