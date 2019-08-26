@@ -80,28 +80,42 @@
                             @endif
 
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    @if(auth()->user()->isAdmin == 1)
-                                        <i class="fas fa-user-shield"></i> 
-                                        {{ Auth::user()->name }} <span class="caret"></span>
-                                    @endif
-                                    
-                                    @if(auth()->user()->isAdmin !== 1)
-                                        <i class="fas fa-user"></i>
-                                        {{ Auth::user()->name }} <span class="caret"></span>
-                                    @endif
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="position:relative; padding-left:50px;" v-pre>
+
+                                <img src="uploads/avatars/{{ Auth::user()->avatar }}" style="width:30px; height:30px; position:absolute; left:10px; border-radius:50%;">
+                                {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="#">
+                                    @if(auth()->user()->isAdmin == 1)
+                                      
+                                        <a href="{{ url('/profile') }}" style="color:white !important; 
+                                                                                padding-left:22px;
+                                                                                font-size:12px;
+                                                                                font-family: 'Roboto', sans-serif;"><i class="fas fa-user-shield"></i> PROFILE</a>
+                                        <span class="caret"></span>
+                                    @endif
+                                    
+                                    @if(auth()->user()->isAdmin !== 1)
+                                  
+                                            <a href="{{ url('/profile') }}" style="color:white !important; 
+                                                                                    padding-left:22px; 
+                                                                                    font-size:12px;
+                                                                                    font-family: 'Roboto', sans-serif;"><i class="fas fa-user"></i> PROFILE</a>
+                                        <span class="caret"></span>
+                                    @endif
+
+                                    </a>  
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                     document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt"></i>
                                         {{ __('Logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
-                                    </form>                                    
+                                    </form>                                 
                                 </div>
                             </li>
                         @endguest

@@ -38,3 +38,7 @@ Route::post('questionnaires.store', 'QuestionnaireController@store')->name('ques
 
 // Admin Routes
 Route::get('admin/routes', 'HomeController@admin')->middleware('admin');
+
+// Profile Routes
+Route::get('profile', 'UserController@profile');
+Route::post('profile', 'UserController@update_avatar');
